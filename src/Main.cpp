@@ -92,7 +92,7 @@ int main() {
 
 			} else if (gamepadInput.isButtonReleased(bind.button)) {
 				for (auto& key : bind.keys)
-					if (!key.press)
+					if (key.press)
 						KeyboardInput::release(key.key);
 			}
 		}
