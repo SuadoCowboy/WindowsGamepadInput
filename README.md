@@ -23,6 +23,8 @@ The file `keybinds.txt` is where you bind your gamepad buttons to simulate keybo
 // this is a comment and is ignored by the key bind handler
 Y = LCTRL+LSHIFT+T // open previously closed tab in your navigator
 X = LALT+TAB // Quick alt tab
+LEFT = LEFT
+RIGHT = RIGHT
 ```
 
 
