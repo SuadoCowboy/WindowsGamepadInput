@@ -1,4 +1,5 @@
 #include <iostream>
+#include <filesystem>
 
 #include <Windows.h>
 
@@ -18,8 +19,13 @@ constexpr float SENSITIVITY_SLOW = 0.0001f;
 constexpr float THUMB_SCROLL_SENSITIVITY_DEFAULT = 240.0f/32768.0f;
 constexpr float THUMB_SCROLL_SENSITIVITY_SLOW = 120.0f/32768.0f;
 
-int main() {
-	KeybindHandler::load("keybinds.txt");
+int main(int argc, char* argv[]) {
+	{ // load keybinds.txt
+		std::filesystem::path programDir = std::filesystem::absolute(argv[0]).parent_path();
+
+		std::string keybindsPath = (programDir/"keybinds.txt").string();
+		KeybindHandler::load(keybindsPath.c_str());
+	}
 
 	GamepadInput gamepadInput{};
 	if (gamepadInput.update())
