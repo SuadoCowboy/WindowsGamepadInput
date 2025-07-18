@@ -1,5 +1,13 @@
 // this is a comment and is ignored by the key bind handler
+A = MEDIA_PLAY_PAUSE
 Y = LCTRL+LSHIFT+T // open previously closed tab in your navigator
 X = LALT+TAB // Quick alt tab
+
 LEFT = LEFT
 RIGHT = RIGHT
+
+BACK = MEDIA_NEXT_TRACK
+START = MEDIA_PREV_TRACK
+
+LEFT_THUMB = WIN+SHIFT+O // Virtual Keyboard
+RIGHT_THUMB = F11 // Fullscreen
