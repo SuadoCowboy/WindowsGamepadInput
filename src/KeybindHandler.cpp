@@ -42,12 +42,10 @@ bool KeybindHandler::load(const char* path) {
 
 	std::ifstream file(path);
 
-	while (true) {
-		std::string line = "";
-
-		std::getline(file, line);
+	std::string line = "";
+	while (std::getline(file, line)) {
 		if (line.empty())
-			break;
+			continue;
 
 		size_t separatorIndex = 0;
 		size_t keyboardKeyEndIndex = line.size();
