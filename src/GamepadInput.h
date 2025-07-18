@@ -4,7 +4,7 @@
 
 #include <Windows.h>
 #include <Xinput.h>
-#pragma comment(lib, "Xinput9_1_0.lib")
+#pragma comment(lib, "Xinput.lib")
 
 class GamepadInput {
 public:
